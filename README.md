@@ -73,4 +73,4 @@ warrior.attack(&warrior); // Calls warrior_attack
 
 Submit:
 1. GitHub repository URL with your completed `object_simulator.c`
-2. Reflection document (`reflection.txt` or `reflection.md`) with 500-600 words
+2. Reflection document (`reflection.txt` or `reflection.md`) with 500-600 words# COMPSXII-Assignment3
