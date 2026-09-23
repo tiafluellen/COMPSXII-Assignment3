@@ -1,0 +1,13 @@
+# Object Simulator Reflection
+
+## Structs vs Classes
+
+In this assignment, I learned that C structs can be used to create some of the same ideas that Python classes provide. In Python, a class can contain data and methods together, and Python automatically handles many of the details. In C, I had to set up these parts myself. I created a Character struct with data fields for the character's name, health, and level. I also added function pointers for the character's attack and take_damage behaviors. I had to explicitly pass a Character pointer to the functions, which is similar to Python automatically passing `self` when a method is called. When a method is called in Python, the object is used to find the correct method and execute it. In my C program, the function pointer inside the struct points to the function that should be used. This helped me understand that the simple method calls in Python involve more work behind the scenes.
+
+## Inheritance Implementation
+
+C does not have the same built-in inheritance syntax as Python. I created inheritance by putting the Character struct inside the Warrior and Mage structs as their first member. The Warrior also has a strength value, while the Mage has a mana value. This allowed both specialized character types to contain the information from the base Character struct while adding their own information. In Python, I could simply write `class Warrior(Character)` to show that Warrior inherits from Character. Python's syntax makes inheritance easier to write and understand because the language handles much of the setup automatically. In C, I had to manually create the relationship between the structures and set the function pointers myself.
+
+## Understanding OOP Mechanics
+
+Function pointers make polymorphism possible because they allow different objects to use different functions through the same type of function call. In my program, I created an array of Character pointers containing a basic Character, a Warrior, and a Mage. When I called the attack function on each character, the same type of function pointer call produced different results. The basic Character performed a basic attack, the Warrior swung a sword, and the Mage cast a magic spell. This showed me how polymorphism can work without having actual classes in C. Systems programmers may use these patterns because C is commonly used for systems where performance and direct control are important. Even though C does not have built-in object-oriented programming, structs and function pointers allow programmers to organize data and behavior in a similar way. This can be useful in areas such as game engines, operating systems, and embedded systems.
